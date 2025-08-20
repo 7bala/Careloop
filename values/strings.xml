@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CareLoop</string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string name="start_banner_title">Start using Med Report</string>
+    <string name="start_banner_subtitle">Get vital information in an intuitive way...</string>
+</resources>
