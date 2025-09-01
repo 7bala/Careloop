@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.careloop">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CareLoop"
+        tools:targetApi="31">
+
+        <!-- Getting Started Screen (App Launches here first) -->
+        <activity
+            android:name=".GettingStarted"
+            android:exported="true"> <!-- must be explicitly set -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- Login Screen -->
+        <activity android:name=".LoginActivity" />
+
+        <!-- Register Screen -->
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".DashboardActivity"/>
+        <activity android:name=".EditProfileActivity"/>
+        <activity android:name=".RelationProfileAdd"/>
+        <activity android:name=".UploadReportActivity"
+        android:exported="false"/>
+
+    </application>
+
+</manifest>
