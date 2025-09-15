@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_profile"
+        android:title="Profile"/>
+    <item
+        android:id="@+id/care"
+        android:title="My Care"/>
+    <item
+        android:id="@+id/recent"
+        android:title="Recent Reports"/>
+    <item
+        android:id="@+id/emergency"
+        android:title="Emergency Contact"/>
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Logout"/>
+</menu>

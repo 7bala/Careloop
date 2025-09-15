@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9"
+    tools:context=".ReportsActivity">
+
+    <!-- Top Bar -->
+
+    <!-- Scrollable Content -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@android:color/white" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Health Reports"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Share Button -->
+        <ImageButton
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:contentDescription="Share"
+            android:padding="12dp"
+            android:layout_marginLeft="250dp"
+            android:src="@drawable/ic_share"
+            app:tint="@android:color/white" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ================== GENERAL PARAMETERS ================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_bottom_rounded"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="General Parameters"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- ROW 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- CBC Card -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn1"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp"
+                            tools:ignore="ExtraText">
+
+                            <!-- Left Side: Texts -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hemogram"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="or CBC"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Blood Type"
+                                    android:textSize="14sp"
+                                    android:textColor="#333"
+                                    android:layout_marginTop="4dp" />
+                            </LinearLayout>
+
+                            <!-- Right Side: Image -->
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="52dp"
+                                android:src="@drawable/ic_blood" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!-- Lipid Profile Card -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn2"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp"
+                            tools:ignore="ExtraText">
+
+                            <!-- Left Side: Texts -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lipid"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Profile"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cholestrol Level"
+                                    android:textSize="13sp"
+                                    android:textColor="#333"
+                                    android:layout_marginTop="4dp" />
+                            </LinearLayout>
+
+                            <!-- Right Side: Image -->
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="52dp"
+                                android:src="@drawable/ic_lipid" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!-- ROW 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- Liver Function -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn3"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="9dp"
+                            tools:ignore="ExtraText">
+
+                            <!-- Left Side: Texts -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Diabetes"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Panel"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fasting Postprandial"
+                                    android:textSize="14sp"
+                                    android:textColor="#333"
+                                    android:layout_marginTop="4dp" />
+                            </LinearLayout>
+
+                            <!-- Right Side: Image -->
+                            <ImageView
+                                android:layout_width="52dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/ic_diabetes" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!-- Kidney Function -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn4"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+
+                            <!-- Left Side: Texts -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Electrolytes"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Panel"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="#000" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Na, K, Cl"
+                                    android:textSize="14sp"
+                                    android:textColor="#333"
+                                    android:layout_marginTop="4dp" />
+                            </LinearLayout>
+
+                            <!-- Right Side: Image -->
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="43dp"
+                                android:src="@drawable/ic_electrolyte" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ================== VITAL PARAMETERS ================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vital Parameters"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- ROW 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- Blood Sugar -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn5"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Thyroid"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Function"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TSH, T3, T4"
+                                android:textSize="14sp"
+                                android:textColor="#333"
+                                android:layout_marginTop="4dp"/>
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="43dp"
+                                android:src="@drawable/ic_thyroid" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Vitamin Levels -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn6"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kidney"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Function"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Creatinine, Urea"
+                                android:textSize="14sp"
+                                android:textColor="#333"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="43dp"
+                                android:src="@drawable/ic_kidney" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!-- ROW 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- Thyroid -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn7"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vitamin D"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vitamin D"
+                                android:textSize="14sp"
+                                android:textColor="#333"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="43dp"
+                                android:src="@drawable/ic_joint" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Iron Studies -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn8"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vitamin B12"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Serum Iron, Ferritin"
+                                android:textSize="14sp"
+                                android:textColor="#333"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="43dp"
+                                android:src="@drawable/ic_vitamin_b12" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!-- ROW 5 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- Electrolytes -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn9"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Liver"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Function"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Bilirubin, SGPT, SGOT"
+                                android:textSize="14sp"
+                                android:textColor="#333"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="43dp"
+                                android:src="@drawable/ic_liver" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Inflammatory -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn10"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cholestrol"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CRP, ESR"
+                                android:textSize="14sp"
+                                android:textColor="#333"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="43dp"
+                                android:src="@drawable/ic_cholestorel" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!-- ROW 6 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- Urine -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn11"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Calcium"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Calcium"
+                                android:textSize="14sp"
+                                android:textColor="#333"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="43dp"
+                                android:src="@drawable/ic_calcium" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Coagulation -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn12"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#F5F5DA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Complete"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hemogram"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PT, aPTT, INR"
+                                android:textSize="14sp"
+                                android:textColor="#333"
+                                android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="43dp"
+                                android:src="@drawable/ic_holo" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_nav"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

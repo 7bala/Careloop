@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: 02 Dec 2022"
+        android:textSize="12sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tvReportTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A Comprehensive Health Analysis Report"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="6dp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tvCentre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inner Health Diagnostic Centre"
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health Score: 63"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"/>
+
+    <!-- Download Button -->
+    <ImageView
+        android:id="@+id/ivDownload"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="8dp"
+        android:src="@android:drawable/stat_sys_download"
+        app:tint="@android:color/black" />
+
+</LinearLayout>
